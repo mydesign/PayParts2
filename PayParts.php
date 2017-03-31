@@ -152,7 +152,6 @@ class PayParts
             $this->LOG['CreateData'] = json_encode($param);
 
             $CreateResult = json_decode($this->sendPost($param, $Url), true);
-			return $CreateResult;
             $checkSignature = [
                 $this->Password,
                 @$CreateResult['state'],
